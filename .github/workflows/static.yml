@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build
-        run: npm run build
+        run: npm install vuepress@next && npm run build
       - name: Deploy
       # 使用别人写好的一个 action
       uses: JamesIves/github-pages-deploy-action@releases/v3
