@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Build
-      run: npm run build
+      run: echo 'hello'
 
     - name: Deploy
       run: |
