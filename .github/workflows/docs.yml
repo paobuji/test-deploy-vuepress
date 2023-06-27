@@ -8,18 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # - name: Build
-    #   run: echo 'hello'
+    - uses: actions/checkout@v3
     - name: Deploy
       run: |
-        shell: bash
+        npm install
         npm run build
-        cd docs/.vuepress/dist
-        git init
-        git config user.name 'chp'
-        git config user.email '1768581208@qq.com'
-        git add .
-        git commit -m 'deploy'
-        git push -f git@github.com:paobuji/paobuji.github.io.git master
-
+      with:
+          branch: gh-pages #部署的分支
+          folder: dist      
 
