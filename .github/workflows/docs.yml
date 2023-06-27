@@ -3,23 +3,17 @@ on:
   push:
     branches:
       - main
-# 写一个工作流部署到gh-pages分支
+# 写一个工作流,就是我提交的时候,给我新建一个分支就行了
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  # 这个名字随便起,但是要和上面的一样
+  build:
+    # 这个名字随便起,但是要和上面的一样
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - name: Create Branch
+        run: |
+          git checkout -b docs
+          git push origin docs
+```
