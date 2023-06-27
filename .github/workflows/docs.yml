@@ -16,4 +16,3 @@ jobs:
         run: |
           git checkout -b docs
           git push origin docs
-```
