@@ -8,11 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Build
-      run: echo 'hello'
-
+    # - name: Build
+    #   run: echo 'hello'
     - name: Deploy
       run: |
+        shell: bash
+        npm run build
         cd docs/.vuepress/dist
         git init
         git config user.name 'chp'
