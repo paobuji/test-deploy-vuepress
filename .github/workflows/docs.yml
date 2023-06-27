@@ -9,4 +9,4 @@ jobs:
 
     steps:
     - name: Print Message
-      run: npm run build
+      run: echo 'hello'
