@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Print Message
       run: |
+        set -e
         npm run build
         cd docs/.vuepress/dist
         git init
