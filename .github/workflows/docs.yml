@@ -1,0 +1,12 @@
+name: learn-github-actions
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Message
+      run: npm run build
