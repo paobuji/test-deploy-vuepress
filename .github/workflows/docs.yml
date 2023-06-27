@@ -8,15 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Print Message
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
       run: |
-        set -e
-        npm run build
         cd docs/.vuepress/dist
         git init
+        git config user.name 'chp'
+        git config user.email '1768581208@qq.com'
         git add .
         git commit -m 'deploy'
         git push -f git@github.com:paobuji/paobuji.github.io.git master
-        cd -
 
 
