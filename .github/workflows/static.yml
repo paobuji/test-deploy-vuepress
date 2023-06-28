@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  # workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 # permissions:
@@ -17,16 +17,16 @@ on:
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+# concurrency:
+#   group: "pages"
+#   cancel-in-progress: false
 
 jobs:
   # Single deploy job since we're just deploying
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,9 +38,9 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
+          ACCESS_TOKEN: ${{ secrets.SECRET }} # GitHub token，用于访问仓库和部署 Pages 测试部署
           branch: gh-pages # 部署到 gh-pages 分支
           folder: docs/.vuepress/dist # 部署 dist 文件夹
           clean: true # 清空 gh-pages 分支上的旧文件
-          ACCESS_TOKEN: ${{ secrets.SECRET }} # GitHub token，用于访问仓库和部署 Pages 测试部署
           # dir: docs/.vuepress/dist # 指定要部署的目录
       
