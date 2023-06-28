@@ -1,0 +1,1 @@
+import{_ as t,o as l,c as s,a as e,b as n}from"./app-5149fda0.js";const o={},c=e("ul",null,[e("li",null,[n("部署时的样式错乱问题,要在配置文件中添加"),e("code",null,"base:'/test-deploy-vuepress/'")]),e("li",null,"GitHub Actions 提供了缓存功能")],-1),_=[c];function a(r,i){return l(),s("div",null,_)}const u=t(o,[["render",a],["__file","index.html.vue"]]);export{u as default};
