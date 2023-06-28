@@ -1,1 +1,1 @@
-- chp
+- 部署时的样式错乱问题,要在配置文件中添加`base:'/test-deploy-vuepress/'`
