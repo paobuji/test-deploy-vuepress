@@ -1,0 +1,1 @@
+import{_ as t,o as s,c as o,a as e,b as c}from"./app-ba300682.js";const l={},n=e("ul",null,[e("li",null,[c("部署时的样式错乱问题,要在配置文件中添加"),e("code",null,"base:'/test-deploy-vuepress/'")])],-1),_=[n];function a(r,d){return s(),o("div",null,_)}const u=t(l,[["render",a],["__file","index.html.vue"]]);export{u as default};
