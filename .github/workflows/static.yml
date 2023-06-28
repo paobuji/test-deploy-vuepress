@@ -38,7 +38,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with: 
-          ssh-key: ${{ secrets.SSH }} # GitHub token，用于访问仓库和部署 Pages 测试部署
+          ssh-key: ${{ secrets.SSH }} # GitHub token，用于访问仓库和部署
           branch: gh-pages # 部署到 gh-pages 分支
           folder: docs/.vuepress/dist # 部署 dist 文件夹
           clean: true # 清空 gh-pages 分支上的旧文件
