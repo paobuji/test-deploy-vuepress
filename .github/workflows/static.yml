@@ -36,11 +36,11 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.3
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           branch: gh-pages # 部署到 gh-pages 分支
           folder: docs/.vuepress/dist # 部署 dist 文件夹
           clean: true # 清空 gh-pages 分支上的旧文件
           token: ${{ secrets.FIRST_SECRET }} # GitHub token，用于访问仓库和部署 Pages
-          dir: docs/.vuepress/dist # 指定要部署的目录
+          # dir: docs/.vuepress/dist # 指定要部署的目录
       
