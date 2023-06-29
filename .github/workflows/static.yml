@@ -10,15 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
-        # github-actions的缓存配置
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
 
       - name: Install Dependencies
         run: npm install vuepress@next -D
