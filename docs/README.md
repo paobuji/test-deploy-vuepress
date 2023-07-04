@@ -1,5 +1,1 @@
-- 部署时的样式错乱问题,要在配置文件中添加`base:'/test-deploy-vuepress/'`
-- GitHub Actions 提供了缓存功能
-- 测试
-- 测试提交
-- 修改一下
+- 测试vercel部署
